@@ -1,0 +1,102 @@
+body{
+    background: linear-gradient(red, black);
+    margin: 0;
+}
+div{
+    
+    box-sizing: border-box;
+    
+    
+}
+header.sticky{
+    font-size: 54px;
+    background: url('https://midu.dev/marvel.jpg');
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-position: center;
+    background-size: cover;
+    -webkit-text-stroke: 3px rgb(139, 16, 16);
+   text-align: center;
+    padding: 10px;
+    position:sticky;
+    top: 0;
+          
+    
+}
+
+header img{
+    width: 45%;
+    border-radius: 20px;
+    border-style: solid;
+    border-style: black;
+    
+    
+}
+header h1{
+    margin: 0;
+    
+}
+
+div.post{
+    background:rgb(204, 20, 51) ;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display:center;
+    margin-top: 10px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 2px solid rgb(204, 20, 51);
+    filter: drop-shadow(
+        0 0 10px rgba(0,0,0, .8)
+    );
+    position:sticky;
+    top: 0;
+
+    
+        
+}
+div.post .post-header div:first-child{
+    display:inline-block;
+    width: 80%;
+    background:rgb(204, 20, 51) ;
+    text-align: left;
+    border-radius: 18px;
+}
+div.post .post-header div:last-child{
+    display:inline-block;
+    font-size: 60px;
+    width:20%;
+    padding: 10px;
+    text-align: right;
+    border-radius: 18px;
+
+}
+div.post h2, div.post p{
+    padding: 10px;
+    margin:0;
+}
+
+div.post img{
+    width: 100%;
+}
+div.container{
+    width: 600px;
+    margin:auto;
+                
+}
+@keyframes show{
+    from{
+        opacity: 0; scale: 10%;
+    }
+    to {
+        opacity: 1; scale: 100%
+    }
+}
+div.post{
+    view-timeline-name: --reveal;
+    animation-name: show; 
+    animation-fill-mode: both;
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
